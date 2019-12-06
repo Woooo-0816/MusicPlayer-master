@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SweetMusicPlayer</string>
+
+    <!-- tabs title -->
+    <!--<string name="tab_recent">最近</string>-->
+    <string name="tab_songs">歌曲</string>
+    <string name="tab_artists">歌手</string>
+    <string name="tab_albums">专辑</string>
+    <string name="tab_online">在线</string>
+    <!--<string name="tab_playlists">播放列表</string>      -->
+    <!--<string name="tab_genres">流派</string>-->
+ <!-- -->
+    <!-- oneBtn_scan -->
+
+    <!-- activity main actionbar menu -->
+    <string name="menu_item_search">搜索</string>
+
+
+    <!--在线音乐部分-->
+    <string name="online_search_text">搜索音乐、歌手</string>
+
+    <!--在线音乐搜索结果页-->
+
+    <!--专辑详情页面 online-->
+    <string name="ativity_album_detail">专辑</string>
+
+    <!--歌手详情页面-->
+    <string name="activity_artist_info">歌手</string>
+
+    <!-- 自定义组件 -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中</string>
+
+    <!-- 消除警告，可忽略 -->
+    <string name="d">图片描述</string>
+
+    <string name="artist_second_text">歌曲:%1$d首   专辑:%2$d张</string>
+
+    <!--左侧菜单-->
+    <string name="menu_item_scan">扫描歌曲</string>
+    <string name="menu_item_effect_adj">音效调节</string>
+    <string name="menu_item_change_theme">个性换肤</string>
+    <string name="menu_item_countdown">定时停止</string>
+    <string name="menu_item_setting">设置</string>
+    <string name="menu_item_exit">退出</string>
+
+    <string name="sleep_countdown_dialog_title">定时停止播放</string>
+</resources>

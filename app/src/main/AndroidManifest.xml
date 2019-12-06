@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huwei.sweetmusicplayer"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />  
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />  
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO" />  
+    <uses-permission android:name="android.permission.REORDER_TASKS" />  
+
+    <application
+        android:name=".SweetApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/sweet"
+        android:label="@string/app_name"
+        android:theme="@style/SweetTheme">
+        <activity
+            android:name=".business.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".business.main.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity android:name=".business.SongScanActivity" />
+        <activity
+            android:name=".business.onlinesearch.OnlineSearchActivity"
+            android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/search_online" />
+        </activity>
+        <activity android:name=".business.AlbumInfoActivity" />
+        <activity android:name=".business.ArtistInfoActivity" />
+        <activity android:name=".business.playmusic.PlayMusicActivity" />
+        <activity android:name=".business.main.localmusic.LocalMusicActivity" />
+        <activity android:name=".business.mv.PlayMvActivity" />
+
+        <service
+            android:name=".business.core.MusicControllerService"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.huwei.sweetmusicplayer.services.MusicControlerService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".business.core.ShakeService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.huwei.sweetmusicplayer.services.ShakeService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".business.recievers.BringToFrontReceiver"
+            android:priority="1000">
+             
+            <intent-filter>            
+                <action android:name="com.huwei.action.BringToFront" />
+                 
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
